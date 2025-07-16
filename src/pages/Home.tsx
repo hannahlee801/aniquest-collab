@@ -1,10 +1,9 @@
-import "./index.css";
-import Header from "./Header";
-import Logo from "./Logo";
-import AnimeCard from "./AnimeCard";
-import HomeBrowse from "./HomeBrowse";
+import Header from "../Header";
+import Logo from "../Logo";
+import AnimeCard from "../AnimeCard";
+import HomeBrowse from "../HomeBrowse";
 
-function App() {
+const Home = () => {
   return (
     <div className="font-anton ml-[25px] mr-[25px]">
       <Header />
@@ -41,6 +40,6 @@ function App() {
       <HomeBrowse />
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
