@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <div className="flex flex-col justify-center mt-10 items-center bg-maingrey-600 drop-shadow-black drop-shadow-md h-[170px] mt-[82px] ">
+    <div className="flex flex-col justify-center items-center bg-maingrey-600 drop-shadow-black drop-shadow-md h-[170px] mt-[82px]">
       <img
         src="../src/assets/aniquest-logo.png"
         alt="Logo"

@@ -37,7 +37,7 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-38">
+    <div className="flex flex-col items-center mt-38 text-white">
       <form onSubmit={handleSubmit}>
         <div>
           <Input

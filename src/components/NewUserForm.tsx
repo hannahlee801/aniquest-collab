@@ -1,6 +1,7 @@
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type NewUserFormData = {
   full_name: string;
@@ -16,6 +17,8 @@ const NewUserForm: React.FC = () => {
     username: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -41,7 +44,7 @@ const NewUserForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-21">
+    <div className="flex flex-col items-center mt-21 text-white">
       <form onSubmit={handleSubmit}>
         <div>
           <Input
@@ -89,6 +92,9 @@ const NewUserForm: React.FC = () => {
         </div>
         <Button
           type="submit"
+          onClick={() => {
+            navigate("/login");
+          }}
           className="mt-8 bg-maingrey-300 hover:bg-brightred-600"
         >
           Submit
