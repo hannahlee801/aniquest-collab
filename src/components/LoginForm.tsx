@@ -1,6 +1,9 @@
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import axios from "axios";
+import useAuth from "../auth/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 type LoginFormData = {
   username: string;
@@ -13,6 +16,9 @@ const LoginForm: React.FC = () => {
     password: "",
   });
 
+  //   const { setToken } = useAuth();
+  //   const navigate = useNavigate();
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -23,7 +29,7 @@ const LoginForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     fetch("http://localhost:8000/token", {
